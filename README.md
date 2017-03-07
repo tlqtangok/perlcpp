@@ -6,19 +6,19 @@ perl embed into cpp , and build into executed files
 
 ```c++
 
-        INIT_PERL_INTERP ;
+INIT_PERL_INTERP ;
 
-        // -------- TODO ----------
-        // ------------------------
+// -------- TODO ----------
+// ------------------------
 
-        char *id_cmd = " $a=qq/ABC_/;$a=$a x 10; $a =~ s/.$//;@arr=split m/_/,$a;  ";
-        P_eval( id_cmd );	// run the perl statement in C++ 
-        P_arr_print( "arr" );
+char *id_cmd = " $a=qq/ABC_/;$a=$a x 10; $a =~ s/.$//;@arr=split m/_/,$a;  ";
+P_eval( id_cmd );	// run the perl statement in C++ 
+P_arr_print( "arr" );
 
-        // ------------------------
-        // ------------------------
-        DESTROY_PERL_INTERP ;
-        return 0;
+// ------------------------
+// ------------------------
+DESTROY_PERL_INTERP ;
+return 0;
 ```
 
 to build that, please run :  sh bld_cpp.sh 
@@ -47,18 +47,18 @@ $ ./interp
  - also based on ./interp.cpp, edit the TODO.
  
  ```c++
-        // -------- TODO ----------
-        // ------------------------
+// -------- TODO ----------
+// ------------------------
 
-        char *id_cmd = " @arr=(0..99); $float_num=1.234; $str=qq(STRINGS); ";
-        P_eval( id_cmd );
+char *id_cmd = " @arr=(0..99); $float_num=1.234; $str=qq(STRINGS); ";
+P_eval( id_cmd );
 
-        int num_idx_3 = P_arr_Int_i("arr", 3);   // => 3 
-	char *str = Str("str"); 	// => "STRINGS"
-	float *float_num = Float("float_num") ; // => 1.234 
+int num_idx_3 = P_arr_Int_i("arr", 3);   // => 3 
+char *str = Str("str"); 	// => "STRINGS"
+float *float_num = Float("float_num") ; // => 1.234 
 
-        // ------------------------
-        // ------------------------
+// ------------------------
+// ------------------------
 ```
 
 
@@ -67,19 +67,20 @@ $ ./interp
  - also based on ./interp.cpp, edit the TODO.
  
  ```c++
-        // -------- TODO ----------
-        // ------------------------
+// -------- TODO ----------
+// ------------------------
 
-	int m_or_not = m("abc", "m/b/");  // m_or_not => 1 
-	char *ss = s("abc", "s/b/_B_/"); // ss => a_B_c   ,this is perl $a =~ s/xx/XX/g
+int m_or_not = m("abc", "m/b/");  // m_or_not => 1 
+char *ss = s("abc", "s/b/_B_/"); // ss => a_B_c   ,this is perl $a =~ s/xx/XX/g
 
-        // ------------------------
-        // ------------------------
+// ------------------------
+// ------------------------
 	
 ```
 
 
-> good enough? or wanna add more subroutines? Then Please give me 5 stars ! 
+good enough? or wanna add more subroutines? Then Please give me 5 stars ! 
+
 
 --By Jidor Tang @ 20170307  : tlqtangok@126.com
 
