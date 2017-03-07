@@ -1,5 +1,5 @@
 # perlcpp
-perl embed into cpp , and build into executed files
+Embed perl into cpp file ,and build into executed files. 
 
 # demo 1 
  - use "./interp.cpp" as template, notice one only need change the code in "TODO AREA".
