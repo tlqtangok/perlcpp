@@ -46,7 +46,7 @@ $ ./interp
 
  - also based on ./interp.cpp, edit the TODO.
  
- ```c++
+```c++
 // -------- TODO ----------
 // ------------------------
 
@@ -80,7 +80,8 @@ char *ss = s("abc", "s/b/_B_/"); // ss => a_B_c   ,this is perl $a =~ s/xx/XX/g
 ```
 
 
-- good enough? or wanna add more subroutines? Then Please give me 5 stars ! 
+
+good enough? or wanna add more subroutines? Then Please give me 5 stars ! 
 
 
 --By Jidor Tang at 20170307  : tlqtangok@126.com
