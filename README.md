@@ -4,7 +4,8 @@ perl embed into cpp , and build into executed files
 # demo 1 
  - use ./interp.cpp as template, notice:
 
-```cpp code
+`
+
         INIT_PERL_INTERP ;
 
         // -------- TODO ----------
@@ -17,8 +18,8 @@ perl embed into cpp , and build into executed files
         // ------------------------
         // ------------------------
         DESTROY_PERL_INTERP ;
-        //return 0;
-```end cpp code
+        return 0;
+`
 
 to build that, please run :  sh bld_cpp.sh 
 (if one see error msg, please use c++11)
@@ -27,6 +28,7 @@ if OK, file "interp" will be generated. run it.
 this will get following output:
 
 $ ./interp
+`
 0 : ABC
 1 : ABC
 2 : ABC
@@ -37,9 +39,13 @@ $ ./interp
 7 : ABC
 8 : ABC
 9 : ABC
+`
 
 # demo 2
+
  - also based on ./interp.cpp, edit the TODO.
+ 
+ `
         // -------- TODO ----------
         // ------------------------
 
@@ -52,9 +58,13 @@ $ ./interp
 
         // ------------------------
         // ------------------------
+`
 
 # demo 3
+
  - also based on ./interp.cpp, edit the TODO.
+ 
+ `
         // -------- TODO ----------
         // ------------------------
 
@@ -63,9 +73,11 @@ $ ./interp
 
         // ------------------------
         // ------------------------
+`
+
 
 good enough? or wanna add more subroutines?
 then Please give me 5 stars ! 
 
---By Jidor Tang @ 20170307
+--By Jidor Tang @ 20170307  : tlqtangok@126.com
 
