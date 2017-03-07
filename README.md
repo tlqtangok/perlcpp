@@ -21,11 +21,13 @@ DESTROY_PERL_INTERP ;
 return 0;
 ```
 
-to build that, please run :  sh bld_cpp.sh 
-(if one see error msg, please use c++11)
+to build that, please run :  sh bld_cpp.sh , remember on Windows, I recommend Strawberry Perl. 
+use the g++ or gcc under Strawberry. (if one see error msg, please comment the first line and 
+uncomment 2nd line to use C++11.)
 
-if OK, file "interp" will be generated. run it.
-this will get following output:
+if lucky enough, check you GCC version, >=4.8 is recommend. 
+
+if everything is ok, a file "interp" will be generated. run it. this will get following output:
 
 $ ./interp
 
