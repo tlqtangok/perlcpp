@@ -73,8 +73,8 @@ float *float_num = Float("float_num") ; // => 1.234
 // -------- TODO ----------
 // ------------------------
 
-int m_ok = m("abc", "m/b/");  // m_or_not => 1 
-int m_not_ok = m("abc", "m/b/");  // m_or_not => 0
+int m_ok = m("abc", "m/b/");  // m_ok => 1 
+int m_not_ok = m("abc", "m/b/");  // m_not_ok => 0
 char *ss = s("abc", "s/b/_B_/"); // ss => a_B_c   ,this is perl $a =~ s/xx/XX/g
 
 // ------------------------
