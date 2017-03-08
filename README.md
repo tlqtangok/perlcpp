@@ -86,7 +86,9 @@ char *ss = s("abc", "s/b/_B_/"); // ss => a_B_c   ,this is perl $a =~ s/xx/XX/g
 
 good enough? or wanna explore more API to see the magic?
 
-# API Description , I think this is self-explaination. no need extra description :)
+# API Description
+
+ - I think this is self-explaination. no need extra description :)
 
 ```c++
 
