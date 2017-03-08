@@ -21,9 +21,9 @@ DESTROY_PERL_INTERP ;
 return 0;
 ```
 
-to build that, please run :  sh bld_cpp.sh , remember on Windows, I recommend Strawberry Perl. 
+to build that, please run :  sh bld_cpp.sh , on Windows, I recommend Strawberry Perl. 
 use the g++ or gcc under Strawberry. (if one see error msg, please comment the first line and 
-uncomment 2nd line to use C++11.)
+uncomment 2nd line to use g++ with -std=c++11.)
 
 if lucky enough, check you GCC version, >=4.8 is recommend. 
 
