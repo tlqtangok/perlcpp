@@ -25,7 +25,7 @@ to build that, please run :  sh bld_cpp.sh , on Windows, I recommend Strawberry 
 use the g++ or gcc under Strawberry. (if one see error msg, please comment the first line and 
 uncomment 2nd line to use g++ with -std=c++11.)
 
-if lucky enough, check you GCC version, >=4.8 is recommend. 
+if not lucky enough to build, check you GCC version, later than version 4.9.2 is recommend. 
 
 if everything is ok, a file "interp" will be generated. run it. this will get following output:
 
@@ -113,7 +113,7 @@ good enough? or wanna explore more API to see the magic?
  
  
 
---By Jidor Tang  <tlqtangok@126.com> at 20170307  : 
+--By Jidor Tang  <tlqtangok@126.com> at 2017-03-07 
 
 
 # todo next
