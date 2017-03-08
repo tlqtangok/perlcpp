@@ -84,8 +84,32 @@ char *ss = s("abc", "s/b/_B_/"); // ss => a_B_c   ,this is perl $a =~ s/xx/XX/g
 
 
 
-good enough? or wanna add more subroutines? Then Please give me 5 stars ! 
+good enough? or wanna explore more API to see the magic?
 
+# API Description , I think this is self-explaination. no need extra description :)
+
+```c++
+
+  INIT_PERL_INTERP;                             init perl and perl interp :my_perl
+...
+  P_eval("$_=111");                             run perl statement
+  Int("a");                                     get $a from eval()
+  Float("a");                                   dotto
+  Str("a");                                     dotto
+  P_arr_len("arr");                             get @arr length
+  P_arr_Str_i("arr", 3);                        get @arr[3] as Str;
+  P_arr_Int_i("arr", 3);                        get @arr[3] as Int;
+  P_arr_Float_i("arr", 3);                      get @arr[3] as Float;
+  P_arr_print("arr");                           print out @arr and its index,very slowly...
+  int xx = m("abc", "m/b./");                   perl match
+  char *ss = s("abc", "s/b/B/g");               perl substitute
+...
+  DESTROY_PERL_INTERP;                          Destroy my_perl
+
+ 
+ ```
+ 
+ 
 
 --By Jidor Tang at 20170307  : tlqtangok@126.com
 
