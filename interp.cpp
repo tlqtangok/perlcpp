@@ -31,6 +31,30 @@ how to build and run (both Windows and Linux platform is OK)
 export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 g++ -o -DWINDIR interp interp.cpp -L`pwd` `perl -MExtUtils::Embed -e ccopts -e ldopts`
 # g++ -o  interp interp.cpp -L`pwd` `perl -MExtUtils::Embed -e ccopts -e ldopts`
+
+useful resource:
+
+cat perlscript.pl   | perl -e '@arr=<>;map{s/\"(\w.*?)\"/qq\{\1\}/g; s/^(.*)/\"\1/g; s/(.)$/\1\"/; s|\\|\\\\|g;  ;print ; }@arr;print qq(;);'
+
+- this will convert the script to c char* string.
+
+like:
+      my $sum=0;  
+      map{  
+              $sum+=$_;   
+      }(0..50);  
+      @arr=(qq{latest}, $sum);      
+===> c char*
+"      my $sum=0;  "
+"      map{  "
+"              $sum+=$_;   "
+"      }(0..50);  "
+"      @arr=(qq{latest}, $sum); " 
+" "
+;
+
+
+
 ./interp
 ### end shell ###
 
