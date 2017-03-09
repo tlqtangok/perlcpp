@@ -32,7 +32,7 @@ export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 g++ -o -DWINDIR interp interp.cpp -L`pwd` `perl -MExtUtils::Embed -e ccopts -e ldopts`
 # g++ -o  interp interp.cpp -L`pwd` `perl -MExtUtils::Embed -e ccopts -e ldopts`
 
-useful resource:
+#CVT_TO_C_CHAR : useful cmd line :
 
 cat perlscript.pl   | perl -e '@arr=<>;map{s/\"(\w.*?)\"/qq\{\1\}/g; s/^(.*)/\"\1/g; s/(.)$/\1\"/; s|\\|\\\\|g;  ;print ; }@arr;print qq(;);'
 
@@ -43,13 +43,13 @@ like:
       map{  
               $sum+=$_;   
       }(0..50);  
-      @arr=(qq{latest}, $sum);      
+      @arr=(qq{sum}, $sum);      
 ===> c char*
 "      my $sum=0;  "
 "      map{  "
 "              $sum+=$_;   "
 "      }(0..50);  "
-"      @arr=(qq{latest}, $sum); " 
+"      @arr=(qq{sum}, $sum); " 
 " "
 ;
 
@@ -96,7 +96,16 @@ int  main (int argc, char **argv, char **env){
         // -------- TODO ----------
         // ------------------------
 
-        char *id_cmd = " $a=qq/ABC_/;$a=$a x 10; $a =~ s/.$//;@arr=split m/_/,$a;  ";
+        // see this file's comment :#CVT_TO_C_CHAR
+   
+        char *id_cmd = 
+             "      my $sum=0;  "
+             "      map{  "
+             "              $sum+=$_;   "
+             "      }(0..50);  "
+             "      @arr=(qq{sum}, $sum); " 
+             " " ;
+   
         P_eval( id_cmd );
 
         P_arr_print( "arr" );
