@@ -117,4 +117,6 @@ good enough? or wanna explore more API to see the magic?
 
 
 # todo next
+- test new env 
 - add t folder for testcases
+
